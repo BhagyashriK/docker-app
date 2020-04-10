@@ -6,4 +6,4 @@ before_install:
   - docker build -t bhagyashri/docker-demo -f Dockerfile.dev .
 
 script:
-  - docker run bhagyashri/docker-demo npm run test -- --coverage CI=true
+  - docker run -e CI=true bhagyashri/docker-demo npm run test -- --coverage
