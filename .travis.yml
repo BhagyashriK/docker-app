@@ -11,10 +11,10 @@ script:
 deploy:
   provoider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker-app"
-  env: "DockerApp-env"
+  app: "doker-react-app"
+  env: "DokerReactApp-env"
   bucket_name: "elasticbeanstalk-us-east-2-671826963718"
-  bucket_path: "docker-app"
+  bucket_path: "docker-react-app"
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   on:
