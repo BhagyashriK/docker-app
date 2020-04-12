@@ -7,3 +7,13 @@ before_install:
 
 script:
   - docker run -e CI=true bhagyashri/docker-demo npm run test -- --coverage
+
+deploy:
+  provoider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-app"
+  env: "DockerApp-env"
+  bucket_name: "elasticbeanstalk-us-east-2-671826963718"
+  bucket_path: "docker-app"
+  on:
+    brach: master
